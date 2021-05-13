@@ -1,0 +1,713 @@
+/*reset*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* global */
+
+@font-face {
+    font-family: "PT Sans";
+    src: url("../fonts/pt-sans.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: bold; 
+    src: url('../fonts/pt-sans-bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'PT Serif'; 
+    src: url("../fonts/pt-serif.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'PT Mono'; 
+    src: url("../fonts/pt-mono.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'NotoColorEmoji'; 
+    src: url("../fonts/NotoColorEmoji.ttf") format("ttf");
+}
+
+.small-size {
+    width: 490px;
+}
+
+.medium-size {
+    width: 630px;   
+}
+
+.large-size {
+    width: 790px;   
+}
+
+@media screen and (max-width: 790px) {
+    /*removes the flickering window*/
+    body {
+        width: 790px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    /*removes the flickering window*/
+    body {
+        width: 630px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    /*removes the flickering window*/
+    body {
+        width: 490px;
+    }
+}
+
+body {
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-right: 15px;
+    overflow: hidden;
+    height: 599px;  
+    font-family: 'NotoColorEmoji', 'PT Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.3;
+    background-color: #434345;
+    display: flex;
+    /*border: 1px dotted red;*/
+}
+
+textarea, input {
+    font-family: 'NotoColorEmoji', 'PT Sans';
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.visibility-hidden {
+    visibility: hidden;
+}
+
+a.logo {
+    position: relative;
+    z-index: 6000;
+    display: block;
+    top: 19px;
+    left: 22px;
+    position: absolute;
+    cursor: pointer;
+    width: 24px;
+    height: 22px;
+    /*border: 1px dashed #434345;*/
+    overflow: hidden;
+}
+
+a.logo div {
+    margin-top: -24px;
+    margin-left: -2px;
+    font-size: 80px;
+}
+
+a:focus {
+    outline: 1px dotted #00bfff !important;
+}
+
+a:active {
+    outline: none !important;
+}
+
+input:focus, textarea:focus {
+    outline: none !important;
+}
+/* menu */
+
+a.new-note-button {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 5px 10px 15px 10px;
+    box-sizing: border-box;
+}
+
+div.horizont-plus {
+    position: absolute;
+    top: 9px;
+    left: 3px;
+    width: 14px;
+    height: 2px;
+    background-color: #999999;
+}
+
+div.vertical-plus {
+    position: absolute;
+    top: 3px;
+    left: 9px;
+    width: 2px;
+    height: 14px;
+    background-color: #999999;
+}
+
+div.list {
+    box-sizing: border-box;
+    margin-top: 42px;
+    margin-left: 15px;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    height: inherit;
+    background-color: inherit;
+    text-align: left;
+    overflow: hidden;
+    /*border: 1px dotted yellow;*/
+}
+
+a.switch-button, a.set-color-button {   
+    display: inline-block;
+    margin: 5px 10px 5px 10px;
+    width: 14px;
+    height: 14px;
+    background-color: inherit;
+    border-radius: 50%;
+    cursor: pointer;
+    /*line-height: 17px;*/
+    /*position: relative;*/
+}
+
+div.list {
+    /*width: 190px;*/
+    /*width: 100%;*/
+}
+
+div.list a {
+    /*width: 100%;*/
+    /*margin-right: 130px;*/
+    margin-right: 100%;
+}
+
+div.list a:after {
+
+
+    font-family: 'NotoColorEmoji', 'PT Sans';
+
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    width: inherit;
+    width: 68%;
+    position: absolute;
+    /*position: relative;*/
+    content: attr(data-value);
+    padding-left: 33px;
+    margin-top: -3px;
+    color: #999999;
+    /*position: relative;*/
+}
+
+div.list a.new-note-button:after {
+    margin-top: 0;
+    width: 200px;
+}
+
+/* notepad */
+
+div.notepad {
+
+
+    /*font-family: 'NotoColorEmoji';*/
+
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    /*width: 400px;*/
+    width: 100%;
+    height: inherit;
+    background-color: inherit;
+    /*box-shadow: -5px 0 20px 0 #434345;
+    box-shadow: -25px 0 30px -30px red;*/
+    /*box-shadow: -25px 0 30px -30px red;
+    position: relative;
+    z-index: 5000;*/
+}
+
+/*div.notepad-expand {
+    width: 520px;
+}*/
+
+div.caption {
+    position: relative;
+    font-weight: bold;  
+
+    /*margin-right: 50px;*/
+
+
+
+}
+
+div.caption:before {
+    /*color: #999999;*/
+    /*padding: 5px 5px 5px 5px;*/
+    /*content: '•';*/
+    /*position: relative;*/
+    /*font-weight: bold;*/
+}
+
+a.visibility-button {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    color: #999999;
+    cursor: pointer;
+    padding: 5px 5px 5px 5px;
+}
+
+/*a.visibility-button:before {
+    content: '•';
+}
+*/
+
+div.title-wrapper {
+    margin-right: 22px;
+}
+
+input.title {
+
+font-family: 'NotoColorEmoji', 'PT Sans';
+    
+
+    position: relative;
+    z-index: 6001;
+    font-weight: inherit;
+    background-color: inherit;
+
+    width: 100%;
+
+    border: none;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-bottom: 4px;
+
+
+
+    /*right: 100px;*/
+    /*margin-right: 50px;*/
+    /*left: 0;*/
+
+    /*border: 1px dashed orange;*/
+}
+
+textarea.note {
+    box-sizing: border-box;
+    width: 100%;
+    height: 535px;
+    padding: 20px;
+    border: 1px solid #a6a6a6;
+    border-radius: 5px;
+    background-color: #dbd7d2;
+    resize: none;
+    /*box-shadow: -25px 0 30px -30px #2b2b2e;*/
+    /*position: relative;*/
+}
+
+/* customize */
+
+div.customize {
+    top: 0;
+    /*right: -100px;*/
+    /*left: 60px;*/
+    /*margin-top: -13px;*/
+    position: absolute;
+    box-sizing: border-box;
+    /*width: 380px;*/
+    /*width: 525px;*/
+    width: 100%;
+    /*margin-right: 100px;*/
+    /*margin-left: 60px;*/
+    height: 599px;
+    background-color: #2a2a2b;
+    /*border-radius: 4px;*/
+    opacity: 0.85;
+    text-align: center;
+    z-index: 5000;
+}
+div.customize p {
+    /*display: inline-block;*/
+    text-align: center;
+    /*padding: 100px 80px 10px 80px;*/
+    /*padding: 100px 10px 10px 10px;*/
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+}
+
+div.customize p a {
+    width: 40px;
+    height: 40px;
+}
+
+a.delete-button {
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    padding-top: 2px;
+    width: 120px;
+    height: 30px;
+    margin-top: 100px;
+    margin-left: 35px;
+    border: 1px dashed #ff0000;
+    border-radius: 4px;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+a.delete-button:after {
+    content: '__MSG_remove__';
+}
+
+a.option-button{
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    padding-top: 2px;
+    width: 120px;
+    height: 30px;
+    margin-top: 100px;
+    /*margin-right: 35px;*/
+    border: 1px dashed #33a3ff;
+    border-radius: 4px;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+a.ok-button {
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    padding-top: 2px;
+    margin-left: 35px;
+    width: 120px;
+    height: 30px;
+    margin-top: 100px;
+    /*margin-right: 35px;*/
+    border: 1px dashed #68b723;
+    border-radius: 4px;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+a.ok-button:after {
+    content: '__MSG_ok__';
+}
+
+a.option-button:after {
+    /*content: 'Options';*/
+    content: '__MSG_options__';
+
+}
+
+/*control remove window*/
+
+div.canvas {
+    z-index: 7000;
+    position: absolute;
+    background-color: #140f0b;
+    opacity: 0.8;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+div.verify-frame, div.new-note-frame {
+    z-index: 8000;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    /*left: 110px;*/
+    /*left: -150px;*/
+    width: 400px;
+    height: 200px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+}
+
+div.new-note-frame {
+    /*width: 509px;*/
+    width: 100%;
+    max-width: 490px;
+    top: 150px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.verify-frame p.caution {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+div.verify-frame a, div.new-note-frame a.create-button, div.new-note-frame a.cancel-button {
+    display: inline-block;
+    padding: 4px 20px;
+    padding-bottom: 6px;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    margin: 0 20px 0 20px;
+}
+
+div.verify-frame a.cancel-button {
+    color: #666666;
+}
+
+div.verify-frame a.remove-button {
+    color: #cd5258;
+    border: 1px dashed #cd5258;
+}
+
+/*create new note window*/
+
+div.new-note-frame input {
+    border-radius: 4px;
+    background-color: #dbd7d2;
+    width: 400px;
+    margin-top: 40px;
+    padding: 10px 15px;
+}
+
+div.new-note-frame a.create-button {
+    margin-top: 30px;
+    color: #33a3ff;
+    border: 1px dashed #64baff;
+}
+
+div.new-note-frame a.cancel-button {
+    margin-top: 30px;
+    color: #666666;
+}
+
+div.new-note-frame div.select-color {
+    display: inline-block;
+    background-color: #434345;
+    margin-top: 30px;
+    padding: 10px 20px;
+    padding-top: 14px;
+    border-radius: 5px;
+    width: 400px;
+}
+
+div.select-color a {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+/*resize*/
+
+div.resize-plank {
+    position: relative;
+    left: 8px;
+    top: 27px;
+    width: 16px;
+    min-width: 15px;
+    max-width: 15px;
+    z-index: 1000;
+    height: inherit;
+    cursor: ew-resize;
+}
+
+a.highlight {
+    color: #dbd7d2;
+}
+
+div.list a.highlight:after {
+    color: #dbd7d2 !important;
+}
+
+/*emoji*/
+
+a.emoji-panel-button {
+    color: #999999;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+div.emoji-panel-buttong-ground {
+    z-index: 6500;
+    position: absolute;
+    background-color: inherit;
+    /*color: #999999;*/
+    /*cursor: pointer;*/
+    top: 20px;
+    right: 12px;
+    padding-right: 4px;
+    padding-left: 4px;
+    /*font-weight: bold;*/
+}
+
+/*a.emoji-panel-button:active {
+    outline: none !important;
+}*/
+
+div.emoji-panel-ground {
+
+    z-index: 10;
+    position: absolute;
+    background-color: #2a2a2b;
+    opacity: 0.9;
+    width: 196px;
+    top: 0;
+    right: 0;
+    border-radius: 4px;
+    padding: 4px;
+    height: 100%;
+}
+
+
+
+
+
+div.emoji-panel {
+
+    font-family: 'NotoColorEmoji';
+
+    position: absolute;
+    /*background-color: #2a2a2b;
+    opacity: 0.5;*/
+    /*height: 300px;*/
+    width: 196px;
+    top: 52px;
+    right: 20px;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+/*div.quick-emoji {
+    position: relative;
+    z-index: 11;  
+    background-color: #dbd7d2;
+    height: 24px;
+    width: 100%;
+    border-radius: 2px;
+
+}*/
+
+a.favourite-emoji {
+
+   /*background-color: #64baff;*/
+
+   /*background-color: #000;*/
+
+
+   text-shadow: 
+
+                #fcf8db 1px 1px 1px, 
+                #fcf8db -1px -1px 1px, 
+                #fcf8db 1px -1px 1px, 
+                #fcf8db -1px 1px 1px,
+
+
+                #ffa154 3px 3px 6px, 
+                #ffa154 -3px -3px 6px, 
+                #ffa154 3px -3px 6px, 
+                #ffa154 -3px 3px 6px;
+
+
+
+
+
+}
+
+a.emoji-button {
+
+
+
+    position: relative;
+    z-index: 20;
+    color: #ffffff;
+    display: inline-block;
+    width: 15px;
+    padding: 4px;
+    /*opacity: 2.0;*/
+    /*background-color: red;*/
+}
+
+
+/*outline: 1px dotted #00bfff !important;*/
+
+
+a.emoji-button:focus {
+
+        text-shadow:
+
+                #ffa154 3px 3px 6px, 
+                #ffa154 -3px -3px 6px, 
+                #ffa154 3px -3px 6px, 
+                #ffa154 -3px 3px 6px;
+
+
+
+
+}
+
+

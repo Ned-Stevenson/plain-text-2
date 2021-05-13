@@ -1,0 +1,192 @@
+{
+  "extensionName": {
+    "message": "Plain Text",
+    "description": "Name of the extension."
+  },
+
+  "emoji": {
+
+        "message": "Emoji"
+    },
+
+
+  "noteCount1": {
+
+        "message": "note"
+    },
+
+    "noteCount2To4": {
+
+        "message": "notes"
+    },
+
+    "noteCount5": {
+
+        "message": "notes"
+    },
+
+    "maxNotesCount": {
+
+        "message": "Max. 15 notes"
+    },
+
+
+
+  "logoButtonTitle": {
+
+        "message": "Edit"
+    },
+
+
+  "inputTitleNoteFrame": {
+
+        "message": "The title"
+    },
+
+    "newNottButtonTitle": {
+
+        "message": "Create!"
+    },
+
+
+    "ok": {
+
+        "message": "Ok!"
+    },
+
+  "done": {
+        "message": "Done!"
+    },
+
+  "extensionDescription": {
+    "message": "A Notepad for quick notes in your browser!",
+    "description": "Description of the extension."
+  },
+
+  "grey": {
+        "message": "G"
+    },
+
+    "purple": {
+        "message": "P"
+    },
+
+    "green": {
+        "message": "G"
+    },
+
+    "red": {
+        "message": "R"
+    },
+
+    "yellow": {
+        "message": "Y"
+    },
+
+    "orange": {
+        "message": "O"
+    },
+
+    "blue": {
+        "message": "B"
+    },
+
+    "brown": {
+        "message": "B"
+    },
+
+    "black": {
+        "message": "B"
+    },
+
+    "white": {
+        "message": "W"
+    },
+
+
+  "random": {
+        "message": "Random"
+    },
+
+  "defaultColor": {
+        "message": "Default bullet color: "
+    },
+
+  "large": {
+        "message": "Large"
+    },
+
+    "medium": {
+        "message": "Medium"
+    },
+
+    "small": {
+        "message": "Small"
+    },
+
+  "notepad": {
+        "message": "Notepad size: "
+    },
+
+  "pangram": {
+        "message": "Brick quiz whangs jumpy veldt fox!"
+    },
+
+  "version": {
+        "message": "Version "
+    },
+
+  "options": {
+        "message": "Options"
+    },
+
+    "remove": {
+        "message": "Remove"
+    },
+
+    "cancel": {
+        "message": "Cancel"
+    },
+
+
+    "create": {
+        "message": "Create!"
+    },
+
+    "caution": {
+        "message": "The note cannot be restored!"
+    },
+
+    "fontPref": {
+        "message": "Font: "
+    },
+
+    "fontSize": {
+        "message": "Font size: "
+    },
+
+    "greetingTitle": {
+        "message": "Welcome!"
+    },
+
+
+    "greeting": {
+        "message": "The \"Plain Text\" has 15 notes and 10 color markers.\n\nYou can customize the font, notepad size, bullet color, etc.\n\nThe text and preferences is auto saved in the browser (Local storage).\n\nHave a nice day! 😀"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+

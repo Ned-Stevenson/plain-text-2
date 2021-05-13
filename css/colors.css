@@ -1,0 +1,93 @@
+/* colors */
+
+.grey-fill {
+    background-color: #999999 !important;
+}
+.grey-line {
+    border: 2px solid #999999 !important;
+}
+.grey-font {
+    color: #999999 !important;
+}
+.purple-fill {
+    background-color: #b784a7 !important;
+}
+.purple-line {
+    border: 2px solid #b784a7 !important;
+}
+.purple-font {
+    color: #b784a7 !important;
+}
+.green-fill {
+    background-color: #68b723 !important;
+}
+.green-line {
+    border: 2px solid #68b723 !important;
+}
+.green-font {
+    color: #68b723 !important;
+}
+.red-fill {
+    background-color: #cd5258 !important;
+}
+.red-line {
+    border: 2px solid #cd5258 !important;
+}
+.red-font {
+    color: #cd5258 !important;
+}
+.yellow-fill {
+    background-color: #ffe16b !important;
+}
+.yellow-line {
+    border: 2px solid #ffe16b !important;
+}
+.yellow-font {
+    color: #ffe16b !important;
+}
+.orange-fill {
+    background-color: #ffa154 !important;
+}
+.orange-line {
+    border: 2px solid #ffa154 !important;
+}
+.orange-font {
+    color: #ffa154 !important;
+}
+.blue-fill {
+    background-color: #64baff !important;
+}
+.blue-line {
+    border: 2px solid #64baff !important;
+}
+.blue-font {
+    color: #64baff !important;
+}
+.brown-fill {
+    background-color: #bc987e !important;
+}
+.brown-line {
+    border: 2px solid #bc987e !important;
+}
+.brown-font {
+    color: #bc987e !important;
+}
+.black-fill {
+    background-color: #140f0b !important;
+}
+.black-line {
+    border: 2px solid #140f0b !important;
+}
+.black-font {
+    color: #140f0b !important;
+}
+.white-fill {
+    background-color: #ffffff !important;
+}
+.white-line {
+    border: 2px solid #ffffff !important;
+}
+.white-font {
+    color: #ffffff !important;
+}
+

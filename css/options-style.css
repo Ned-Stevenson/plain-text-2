@@ -1,0 +1,269 @@
+/*reset*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* global */
+
+@font-face {
+    font-family: "PT sans";
+    src: url("../fonts/pt-sans.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'PT sans';
+    font-style: normal;
+    font-weight: bold; 
+    src: url('../fonts/pt-sans-bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'PT serif'; 
+    src: url("../fonts/pt-serif.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'PT mono'; 
+    src: url("../fonts/pt-mono.woff") format("woff");
+}
+
+@media screen and (max-width: 790px) {
+    body {
+        width: 790px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    body {
+        width: 630px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    body {
+        width: 490px;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    position:relative;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    background-color: #434345;
+    height: 599px;
+    /*border: 1px dashed red;*/
+}
+
+div.main-area {
+    width: 490px;
+}
+
+a {
+    text-decoration: none;
+    color: #64baff;
+}
+
+a:focus {
+    outline: 1px dotted #00bfff !important;
+}
+
+a:active {
+    outline: none !important;
+}
+
+a.sans {
+    font-family: 'PT Sans', sans-serif;
+
+}
+
+a.serif {
+    font-family: 'PT Serif', serif;
+    
+}
+
+a.mono {
+    font-family: 'PT Mono', mono;   
+}
+
+p.pref {
+    color: #dbd7d2;
+    padding: 20px 10px 20px 20px;  
+}
+
+a.button {
+    display: inline-block;
+    cursor: pointer;
+    padding: 4px 20px 6px 20px;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    margin-right: 10px;
+    /*margin-bottom: 10px;*/
+    margin-top: 10px;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*a.circle {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    padding: 4px;
+    text-align: center;
+    vertical-align: middle;
+}*/
+
+a.selected {
+    background-color: #64baff;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+a.color-selected {
+    padding: 4px 10px 6px 10px;
+    padding: 10px;
+    /*border: 1px solid;*/
+}
+
+a.done {
+    /*margin-top: 40px;*/
+    border: 1px dashed #68b723;
+    color: #ffffff;
+}
+
+p.about {
+    color: #999999;
+}
+
+/*p.footer {
+    position: absolute;
+    bottom: 0;
+}*/
+
+a.silent {
+    color: #808080;
+    border: 1px dotted #808080;
+}
+
+@keyframes randomButton {
+    0% {
+        background-color: #64baff;
+        
+    }
+    25% {
+        background-color: #cd5258;
+        
+    }
+    50% {
+        background-color: #b784a7;
+    }
+    75% {
+        background-color: #bc987e;
+    }
+
+    100% {
+        background-color: #68b723;
+    }
+}
+
+a.random-animation {
+animation: randomButton infinite 240s;
+color: #ffffff;
+}
+
+p.font-size {
+    position: relative;
+    /*width: 100%;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+p.font-size a:active {
+    background-color: #64baff;
+    color: #ffffff;
+}
+
+a.silent {
+    color: #808080;
+    border: 1px dotted #808080;
+    cursor: default;
+}
+
+p.font-size a.silent {
+    color: #808080;
+    border: 1px dotted #808080;
+    /*background-color: #434345;*/
+    background-color: inherit;
+}
+
+p.font-size a.font-size-screen {
+    height: 16px;
+    position: absolute;
+    width: 0;
+    border: 1px dotted #808080;
+    cursor: default;
+    /*padding-right: 2px;*/
+    /*padding-left: : -2px;*/
+}
+
+p.font-size a.font-size-screen:active {
+    background-color: inherit;
+    color: #64baff;
+    /*padding-right: 2px;*/
+    /*padding-left: : -2px;*/
+}
+
+p.font-size a.font-size-screen:after {
+    content: attr(data-value);
+    margin-left: -9px;
+}
+
+span.font-size-example {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 45px;
+    margin-right: 5px;
+    /*border: 1px dashed orange;*/
+    padding: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 210px;
+    /*width: 98%;*/
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: 10px;
+}
+
+
+
