@@ -26,7 +26,7 @@ var moveActiveSwitchButton = function (i) {
         // yCoordinates = Number.parseInt(yCoordinates);
 
 
-        // var body = document.querySelector('body');
+        var body = document.querySelector('body');
 
         body.addEventListener('mousemove', function (event) {
 
