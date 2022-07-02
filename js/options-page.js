@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     function localizeElement(element, message) {
         var elementDom = document.querySelector(element);
-        var messageLocal = browser.i18n.getMessage(message);
+        var messageLocal = chrome.i18n.getMessage(message);
         elementDom.textContent = messageLocal;
     }  
 

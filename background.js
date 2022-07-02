@@ -1,3 +1,3 @@
-browser.commands.onCommand.addListener((command) => {
-  browser.browserAction.openPopup();
+chrome.commands.onCommand.addListener((command) => {
+  chrome.browserAction.openPopup();
 });

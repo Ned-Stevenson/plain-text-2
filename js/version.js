@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     
 
-    text = browser.i18n.getMessage('version');
+    text = chrome.i18n.getMessage('version');
     var textVersion = text + version;
     var aboutVers = document.querySelector('.about');
     aboutVers.textContent = textVersion;

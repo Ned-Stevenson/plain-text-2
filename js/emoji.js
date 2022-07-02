@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // localization
 
-    emojiTitle = browser.i18n.getMessage('emoji');
+    emojiTitle = chrome.i18n.getMessage('emoji');
     emojiPanelButton.setAttribute('title', emojiTitle);
 
     // open panel

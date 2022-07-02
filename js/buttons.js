@@ -162,9 +162,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var preActiveNote = activeNote;
     var newNoteButton = document.querySelector('.new-note-button');
-    noteCountOne = browser.i18n.getMessage('noteCount1');
-    noteCountTwotoFour = browser.i18n.getMessage('noteCount2To4');
-    noteCountFiveAndMore = browser.i18n.getMessage('noteCount5');
+    noteCountOne = chrome.i18n.getMessage('noteCount1');
+    noteCountTwotoFour = chrome.i18n.getMessage('noteCount2To4');
+    noteCountFiveAndMore = chrome.i18n.getMessage('noteCount5');
     if (order.length < 15) {
         newNoteButton.setAttribute('data-value', order.length + ' ' + noteCountFiveAndMore);
         if (order.length < 5) {
@@ -303,7 +303,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     } else {
-        var maxNotesCount = browser.i18n.getMessage('maxNotesCount');
+        var maxNotesCount = chrome.i18n.getMessage('maxNotesCount');
         newNoteButton.setAttribute('data-value', maxNotesCount);
         newNoteButton.setAttribute('style', 'cursor: default');
     }  
