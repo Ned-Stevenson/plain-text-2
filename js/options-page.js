@@ -1,9 +1,9 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     function localizeElement(element, message) {
         var elementDom = document.querySelector(element);
         var messageLocal = chrome.i18n.getMessage(message);
         elementDom.textContent = messageLocal;
-    }  
+    }
 
     buildDomElement('.main-area', 'p', 'font-pref');
     addClassName('.font-pref', 'pref');
@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var setColorBlock = document.querySelector('.set-color-block');
     var brElement = document.createElement('br');
     setColorBlock.appendChild(brElement);
+
     function createButtonSetColor(color) {
         var className = color + '-font';
         buildLinkElement('.set-color-block', className, '', '');
@@ -79,8 +80,8 @@ document.addEventListener('DOMContentLoaded', function () {
     ];
     for (var i = 0; i < allColors.length; i++) {
         createButtonSetColor(allColors[i]);
-        
-    }  
+
+    }
 
     // 'done' button
 

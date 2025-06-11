@@ -1,22 +1,23 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     var textArea = document.querySelector('textarea');
     var TextAreaName = textArea.getAttribute('name');
+
     function setCaretPosition() {
         var caretPosStart = textArea.selectionStart;
         localStorage.setItem(TextAreaName + '-caretStart', caretPosStart);
         var caretPosEnd = textArea.selectionEnd;
         localStorage.setItem(TextAreaName + '-caretEnd', caretPosEnd);
     }
-    textArea.addEventListener('keyup', function () {
+    textArea.addEventListener('keyup', function() {
         setCaretPosition();
     });
-    textArea.addEventListener('mouseup', function () {
+    textArea.addEventListener('mouseup', function() {
         setCaretPosition();
     });
-    textArea.addEventListener('click', function () {
+    textArea.addEventListener('click', function() {
         setCaretPosition();
     });
-    textArea.addEventListener('mouseout', function () {
+    textArea.addEventListener('mouseout', function() {
         setCaretPosition();
     });
     var textAreaCaretPosStart = localStorage.getItem(TextAreaName + '-caretStart');

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     var preActiveColor;
     var logo = document.querySelector('.logo');
     var order = localStorage.getItem('order');
@@ -10,28 +10,28 @@ document.addEventListener('DOMContentLoaded', function () {
     var activeNotepad = document.querySelector('.' + activeNote + '-notepad');
     var aciveSwitchButton = document.querySelector('.' + activeNote + '-switch-button');
     // switch
-    var ActiveSwitchButton = function (i) {
+    var ActiveSwitchButton = function(i) {
         var switchButton = document.querySelector('.' + order[i] + '-switch-button');
-        switchButton.addEventListener('click', function () {
+        switchButton.addEventListener('click', function() {
             localStorage.setItem('activeNote', order[i]);
             localStorage.setItem('activeColor', setColors[i]);
         });
     };
     for (var i = 0; i < order.length; i++) {
         ActiveSwitchButton(i);
-    }  
+    }
 
     // customize menu
 
     var customizeMenu = document.querySelector('.customize');
     var okButton = document.querySelector('.ok-button');
-    okButton.addEventListener('click', function (event) {
+    okButton.addEventListener('click', function(event) {
         event.preventDefault();
         customizeMenu.classList.toggle('hidden');
         var emojiPanelButton = document.querySelector('.emoji-panel-button');
         emojiPanelButton.classList.toggle('hidden');
     });
-    logo.addEventListener('click', function (event) {
+    logo.addEventListener('click', function(event) {
         event.preventDefault();
         var emojiPanelGround = document.querySelector('.emoji-panel-ground');
         var emojiPanel = document.querySelector('.emoji-panel');
@@ -53,12 +53,12 @@ document.addEventListener('DOMContentLoaded', function () {
             var swtchButton = document.querySelectorAll('.switch-button');
             for (var i = 0; i < swtchButton.length; i++) {
                 swtchButton[i].setAttribute('tabindex', '-1');
-            }      
+            }
         }
     });
-    var targetColorMenu = function (i, color) {
+    var targetColorMenu = function(i, color) {
         var circle = customizeMenu.querySelector('.' + color + '-line');
-        circle.addEventListener('click', function (event) {
+        circle.addEventListener('click', function(event) {
             event.preventDefault();
             var activeCircle = customizeMenu.querySelector('.' + activeColor + '-line');
             activeCircle.classList.remove(activeColor + '-fill');
@@ -90,14 +90,14 @@ document.addEventListener('DOMContentLoaded', function () {
     };
     for (let i = 0; i < getColorsLength(); i++) {
         preActiveColor = targetColorMenu(i, getColors(i));
-    }  
+    }
 
     // list of title names
 
     function deleteLineBreak() {
-            // function delete line break and multiple spaces
-            titleText = titleText.replace(/\s+/g, ' '); 
-        }
+        // function delete line break and multiple spaces
+        titleText = titleText.replace(/\s+/g, ' ');
+    }
 
     for (let i = 0; i < order.length; i++) {
         var titleText = localStorage.getItem(order[i] + '-title');
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
             switchButton.setAttribute('title', '...'); // for empty text
             switchButton.setAttribute('data-value', '...');
         }
-    }  
+    }
 
     // resize notepad area
 
@@ -130,8 +130,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var bodyWidth = bodyMainArea.offsetWidth;
     bodyWidth = Number.parseInt(bodyWidth);
     var resizeTextArea = false; // When true, area resized
-    resizePlank.addEventListener('mousedown', function () {
-        bodyMainArea.addEventListener('mousemove', function (event) {
+    resizePlank.addEventListener('mousedown', function() {
+        bodyMainArea.addEventListener('mousemove', function(event) {
             if (resizeTextArea == true) {
                 var coordinates = (event.pageX + '');
                 coordinates = Number.parseInt(coordinates); // string to number
@@ -147,14 +147,14 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
         resizeTextArea = true;
-        
+
     });
-    document.addEventListener('mouseup', function (event) {
+    document.addEventListener('mouseup', function(event) {
         var widthListArea = document.querySelector('.list').offsetWidth;
         if (resizeTextArea == true) {
             localStorage.setItem('widthMenuList', widthListArea);
             resizeTextArea = false;
-        }   
+        }
 
     });
 
@@ -172,12 +172,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         if (order.length == 1) {
             newNoteButton.setAttribute('data-value', order.length + ' ' + noteCountOne);
-        }    
+        }
 
-        newNoteButton.addEventListener('click', function (event) {
+        newNoteButton.addEventListener('click', function(event) {
             event.preventDefault();
             var newNote = getRandomClassName();
-            var duplicateSearch = function () {
+            var duplicateSearch = function() {
                 var duplicate = document.querySelector('.' + newNote + '-switch-button');
                 if (duplicate == null || duplicate == undefined) {
                     return true;
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 order.unshift(newNote);
                 localStorage.setItem('order', order);
-            }      
+            }
 
             // new note + frame
 
@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // enter button
 
-            inputTitle.addEventListener('keydown', function (e) {
+            inputTitle.addEventListener('keydown', function(e) {
                 if (e.keyCode === 13) {
                     window.location.reload(false);
                 }
@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (localStorage.getItem(name) == null) {
                 localStorage.setItem(name, '');
             }
-            inputTitle.oninput = function () {
+            inputTitle.oninput = function() {
                 localStorage.setItem(name, inputTitle.value);
             };
 
@@ -231,16 +231,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 activeColor = getRandomColor();
             } else {
                 activeColor = defaultColorButton;
-            }      
+            }
 
             // console.log(activeColor);
 
-            var setNewNoteColor = function (color) {
+            var setNewNoteColor = function(color) {
                 var frameColors = document.querySelector('.select-color');
                 var activeCircle = frameColors.querySelector('.' + activeColor + '-line');
                 activeCircle.classList.add(activeColor + '-fill');
                 var circle = frameColors.querySelector('.' + color + '-line');
-                circle.addEventListener('click', function (event) {
+                circle.addEventListener('click', function(event) {
                     event.preventDefault();
                     var allCicles = frameColors.querySelectorAll('.select-color-button');
                     for (var i = 0; i < allCicles.length; i++) {
@@ -259,12 +259,12 @@ document.addEventListener('DOMContentLoaded', function () {
             };
             for (var i = 0; i < getColorsLength(); i++) {
                 setNewNoteColor(getColors(i));
-            }      
+            }
 
             // cancel button
 
             var cancelButtonCreateNewNote = newNoteFrame.querySelector('.cancel-button');
-            cancelButtonCreateNewNote.addEventListener('click', function () {
+            cancelButtonCreateNewNote.addEventListener('click', function() {
                 localStorage.removeItem(newNote + '-title');
                 setColors.splice(0, 1);
                 localStorage.setItem('setColors', setColors);
@@ -277,11 +277,11 @@ document.addEventListener('DOMContentLoaded', function () {
                             preActiveColor = setColors[i];
                         }
                     }
-                }        
+                }
 
                 localStorage.setItem('activeColor', preActiveColor);
             });
-            var setLocalStorage = function () {
+            var setLocalStorage = function() {
                 localStorage.setItem('activeColor', activeColor);
                 localStorage.setItem('activeNote', newNote);
                 localStorage.setItem('setColors', setColors);
@@ -306,16 +306,16 @@ document.addEventListener('DOMContentLoaded', function () {
         var maxNotesCount = chrome.i18n.getMessage('maxNotesCount');
         newNoteButton.setAttribute('data-value', maxNotesCount);
         newNoteButton.setAttribute('style', 'cursor: default');
-    }  
+    }
 
     // delete note
 
     var removeButton = document.querySelector('.' + activeNote + '-delete-button');
     if (order.length == 1) {
         removeButton.classList.add('hidden');
-    } 
+    }
 
-    removeButton.addEventListener('click', function (event) {
+    removeButton.addEventListener('click', function(event) {
         event.preventDefault();
         customizeMenu.classList.add('hidden');
         var canvas = document.querySelector('.canvas');
@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var removeButton = document.querySelector('.remove-button');
         removeButton.setAttribute('tabindex', '2');
         var removeButtonFinal = document.querySelector('.remove-button');
-        removeButtonFinal.addEventListener('click', function () {
+        removeButtonFinal.addEventListener('click', function() {
             var newOrder;
             for (var i = 0; i < order.length; i++) {
                 if (activeNote == order[i]) {
@@ -351,5 +351,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-
-

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     var title = localStorage.getItem('first-title');
     var text = localStorage.getItem('first-note');
     if (title == null) {

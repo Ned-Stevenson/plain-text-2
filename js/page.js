@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
 
     // window size
 
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         setColorsStorage = defaultColor;
         localStorage.setItem('setColors', defaultColor);
     }
-    if (typeof (setColorsStorage) == 'string') { // checking the data type
+    if (typeof(setColorsStorage) == 'string') { // checking the data type
         setColorsStorage = setColorsStorage.split(','); // convert string to array
     }
     var setColors = setColorsStorage;
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (activeColor == null) {
         activeColor = defaultColor[0];
         localStorage.setItem('activeColor', defaultColor[0]);
-    }  
+    }
 
     // menu width
 
@@ -52,9 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let menuList = document.querySelector('.list');
         menuList.style.minWidth = widthListArea + 'px';
         menuList.style.maxWidth = widthListArea + 'px';
-    }  
-
-
+    }
 
     // menu-visibility
 
@@ -69,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // tabs buttons
 
-    var createTabMenu = function (i) {
+    var createTabMenu = function(i) {
         var tabMenu = document.querySelector('.list');
         var buttonTabMenu = document.createElement('a');
         buttonTabMenu.setAttribute('href', '');
@@ -81,12 +79,12 @@ document.addEventListener('DOMContentLoaded', function () {
     };
     for (var i = 0; i < order.length; i++) {
         createTabMenu(i);
-    }  
+    }
 
     // notepads
 
-    var createNotepads = function (i) {
-        var notepad = function (i) {
+    var createNotepads = function(i) {
+        var notepad = function(i) {
             var notepad = document.createElement('div');
             notepad.classList.add(activeNote + '-notepad');
             notepad.classList.add('notepad');
@@ -98,14 +96,14 @@ document.addEventListener('DOMContentLoaded', function () {
             var body = document.querySelector('body');
             body.appendChild(notepad);
         };
-        var caption = function (i) {
+        var caption = function(i) {
             var notepad = document.querySelector('.' + activeNote + '-notepad');
             var caption = document.createElement('div');
             caption.classList.add('caption');
             caption.classList.add(activeNote + '-caption');
             notepad.appendChild(caption);
         };
-        var customizeButton = function (i) {
+        var customizeButton = function(i) {
             var caption = document.querySelector('.' + activeNote + '-caption');
             var button = document.createElement('a');
             button.classList.add('visibility-button');
@@ -121,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             button.style.zIndex = '6002';
         };
-        var customizeMenu = function (i) {
+        var customizeMenu = function(i) {
             var notepad = document.querySelector('body');
             var divCustomize = document.createElement('div');
             divCustomize.classList.add('customize');
@@ -130,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
             divCustomize.setAttribute('id', activeNote + '-customize');
             notepad.appendChild(divCustomize);
         };
-        var trayOfCustomizeMenu = function (i) {
+        var trayOfCustomizeMenu = function(i) {
             var divCustomize = document.querySelector('.' + activeNote + '-customize');
             var pCustomize = document.createElement('p');
             pCustomize.classList.add(activeNote + '-tray');
@@ -154,9 +152,9 @@ document.addEventListener('DOMContentLoaded', function () {
             deleteButton.setAttribute('href', '');
             divCustomize.appendChild(deleteButton);
         };
-        var colorCustomizeButtons = function (i) {
+        var colorCustomizeButtons = function(i) {
             var pCustomize = document.querySelector('.' + activeNote + '-tray');
-            var colorsButtons = function (j) {
+            var colorsButtons = function(j) {
                 var colorButton = document.createElement('a');
                 colorButton.classList.add('set-color-button');
                 colorButton.classList.add(getColors(j) + '-line');
@@ -167,13 +165,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 colorsButtons(j);
             }
         };
-        var input = function (i) {
+        var input = function(i) {
             var caption = document.querySelector('.' + activeNote + '-caption');
 
             var divTitle = document.createElement('div');
             divTitle.classList.add('title-wrapper');
             caption.appendChild(divTitle);
-
 
             var input = document.createElement('input');
             input.classList.add('title');
@@ -181,10 +178,8 @@ document.addEventListener('DOMContentLoaded', function () {
             input.setAttribute('name', activeNote + '-title');
             divTitle.appendChild(input);
 
-
-
         };
-        var textarea = function (i) {
+        var textarea = function(i) {
             var caption = document.querySelector('.' + activeNote + '-caption');
             var textArea = document.createElement('textarea');
             textArea.classList.add('note');
@@ -224,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function () {
     textareaFocus.focus();
 
     // fonts settings
-    
+
     var fontDefault = localStorage.getItem('font');
     var fontSizeDefault = localStorage.getItem('font-size');
     if (fontDefault == null || fontDefault == undefined) {

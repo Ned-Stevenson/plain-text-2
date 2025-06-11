@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     var removeButton = document.querySelector('.remove-button');
     var removeButtonLocal = chrome.i18n.getMessage('remove');
     removeButton.textContent = removeButtonLocal;
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     cancelButtonLocal = chrome.i18n.getMessage('cancel');
     for (var i = 0; i < cancelButton.length; i++) {
         cancelButton[i].textContent = cancelButtonLocal;
-    }  
+    }
 
     // create button
 

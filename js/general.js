@@ -4,10 +4,12 @@ function buildDomElement(parent, element, className) {
     childElement.classList.add(className);
     parentElement.appendChild(childElement);
 }
+
 function addClassName(element, className) {
     var elementDom = document.querySelector(element);
     elementDom.classList.add(className);
 }
+
 function buildLinkElement(parent, className, link, name) {
     var parentElement = document.querySelector(parent);
     var childElement = document.createElement('a');
@@ -16,6 +18,7 @@ function buildLinkElement(parent, className, link, name) {
     childElement.textContent = name;
     parentElement.appendChild(childElement);
 }
+
 function removeSelectedClass(element) {
     var box = document.querySelector('.' + element);
     var allButtons = box.querySelectorAll('.button');
@@ -23,6 +26,7 @@ function removeSelectedClass(element) {
         allButtons[i].classList.remove('selected');
     }
 }
+
 function setWindowSize() {
     var bodyMain = document.querySelector('body');
     var notePadSizeBody = localStorage.getItem('notepad-size');
@@ -33,6 +37,7 @@ function setWindowSize() {
     }
     bodyMain.style.width = notePadSizeBody + 'px';
 }
+
 function getColors(i) {
     var colors = [
         'grey',
@@ -48,6 +53,7 @@ function getColors(i) {
     ];
     return colors[i];
 }
+
 function getColorsLength() {
     var colors = [
         'grey',
@@ -63,6 +69,7 @@ function getColorsLength() {
     ];
     return colors.length;
 }
+
 function getRandomColor() {
     var colors = [
         'grey',
@@ -78,6 +85,7 @@ function getRandomColor() {
     ];
     return colors[Math.floor(Math.random() * (colors.length - 0)) + 0];
 }
+
 function getRandomClassName() {
     var alfabet = [
         'a',
@@ -107,7 +115,7 @@ function getRandomClassName() {
         'y',
         'z'
     ];
-    var randomNumber = function () {
+    var randomNumber = function() {
         return Math.floor(Math.random() * (alfabet.length - 0)) + 0;
     };
     var className = alfabet[randomNumber()];
@@ -117,11 +125,12 @@ function getRandomClassName() {
     }
     return className;
 }
+
 function setUnfocus() {
     var i,
-    allLinks,
-    inputTitle,
-    textArea;
+        allLinks,
+        inputTitle,
+        textArea;
     allLinks = document.querySelectorAll('a');
     for (i = 0; i < allLinks.length; i++) {
         allLinks[i].setAttribute('tabindex', '-1');
@@ -139,7 +148,7 @@ function setUnfocus() {
 // local storage
 
 var getLocalStorage = {
-    order: function () {
+    order: function() {
         var order = localStorage.getItem('order');
         if (order == null) {
             order = [
@@ -155,7 +164,7 @@ var getLocalStorage = {
         }
         return order;
     },
-    activeNote: function (order) {
+    activeNote: function(order) {
         var activeNote = localStorage.getItem('activeNote');
         if (activeNote == null) {
             activeNote = order[0];
