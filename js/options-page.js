@@ -87,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     buildDomElement('.main-area', 'p', 'done-button-block');
     addClassName('.done-button-block', 'pref');
+    // TODO - Make this link back to the sidebar if required
     buildLinkElement('.done-button-block', 'done', '../index.html', '');
     addClassName('.done', 'button');
     localizeElement('.done', 'done');

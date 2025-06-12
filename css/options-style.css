@@ -1,6 +1,86 @@
 /*reset*/
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -13,15 +93,20 @@ body {
     line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
     list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
     quotes: none;
 }
 
-blockquote:before, blockquote:after, q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
     content: '';
     content: none;
 }
@@ -41,17 +126,17 @@ table {
 @font-face {
     font-family: 'PT sans';
     font-style: normal;
-    font-weight: bold; 
+    font-weight: bold;
     src: url('../fonts/pt-sans-bold.woff') format('woff');
 }
 
 @font-face {
-    font-family: 'PT serif'; 
+    font-family: 'PT serif';
     src: url("../fonts/pt-serif.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'PT mono'; 
+    font-family: 'PT mono';
     src: url("../fonts/pt-mono.woff") format("woff");
 }
 
@@ -75,7 +160,7 @@ table {
 
 body {
     box-sizing: border-box;
-    position:relative;
+    position: relative;
     padding-bottom: 0;
     box-sizing: border-box;
     font-family: 'PT Sans', sans-serif;
@@ -109,16 +194,16 @@ a.sans {
 
 a.serif {
     font-family: 'PT Serif', serif;
-    
+
 }
 
 a.mono {
-    font-family: 'PT Mono', mono;   
+    font-family: 'PT Mono', mono;
 }
 
 p.pref {
     color: #dbd7d2;
-    padding: 20px 10px 20px 20px;  
+    padding: 20px 10px 20px 20px;
 }
 
 a.button {
@@ -178,15 +263,18 @@ a.silent {
 @keyframes randomButton {
     0% {
         background-color: #64baff;
-        
+
     }
+
     25% {
         background-color: #cd5258;
-        
+
     }
+
     50% {
         background-color: #b784a7;
     }
+
     75% {
         background-color: #bc987e;
     }
@@ -197,8 +285,8 @@ a.silent {
 }
 
 a.random-animation {
-animation: randomButton infinite 240s;
-color: #ffffff;
+    animation: randomButton infinite 240s;
+    color: #ffffff;
 }
 
 p.font-size {
@@ -264,6 +352,3 @@ span.font-size-example {
     text-overflow: ellipsis;
     padding-right: 10px;
 }
-
-
-
