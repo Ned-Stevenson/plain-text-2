@@ -1,6 +1,6 @@
 /*reset*/
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+* {
     margin: 0;
     padding: 0;
     border: 0;
@@ -13,15 +13,20 @@ body {
     line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
     list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
     quotes: none;
 }
 
-blockquote:before, blockquote:after, q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
     content: '';
     content: none;
 }
@@ -41,22 +46,22 @@ table {
 @font-face {
     font-family: 'PT Sans';
     font-style: normal;
-    font-weight: bold; 
+    font-weight: bold;
     src: url('../fonts/pt-sans-bold.woff') format('woff');
 }
 
 @font-face {
-    font-family: 'PT Serif'; 
+    font-family: 'PT Serif';
     src: url("../fonts/pt-serif.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'PT Mono'; 
+    font-family: 'PT Mono';
     src: url("../fonts/pt-mono.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'NotoColorEmoji'; 
+    font-family: 'NotoColorEmoji';
     src: url("../fonts/NotoColorEmoji.ttf") format("ttf");
 }
 
@@ -65,14 +70,15 @@ table {
 }
 
 .medium-size {
-    width: 630px;   
+    width: 630px;
 }
 
 .large-size {
-    width: 790px;   
+    width: 790px;
 }
 
 @media screen and (max-width: 790px) {
+
     /*removes the flickering window*/
     body {
         width: 790px;
@@ -80,6 +86,7 @@ table {
 }
 
 @media screen and (max-width: 630px) {
+
     /*removes the flickering window*/
     body {
         width: 630px;
@@ -87,6 +94,7 @@ table {
 }
 
 @media screen and (max-width: 490px) {
+
     /*removes the flickering window*/
     body {
         width: 490px;
@@ -99,7 +107,7 @@ body {
     padding-top: 20px;
     padding-right: 15px;
     overflow: hidden;
-    height: 599px;  
+    height: 599px;
     font-family: 'NotoColorEmoji', 'PT Sans', sans-serif;
     font-size: 16px;
     line-height: 1.3;
@@ -108,7 +116,8 @@ body {
     /*border: 1px dotted red;*/
 }
 
-textarea, input {
+textarea,
+input {
     font-family: 'NotoColorEmoji', 'PT Sans';
     font-size: 16px;
     line-height: 1.3;
@@ -160,9 +169,11 @@ a:active {
     outline: none !important;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
     outline: none !important;
 }
+
 /* menu */
 
 a.new-note-button {
@@ -207,7 +218,8 @@ div.list {
     /*border: 1px dotted yellow;*/
 }
 
-a.switch-button, a.set-color-button {   
+a.switch-button,
+a.set-color-button {
     display: inline-block;
     margin: 5px 10px 5px 10px;
     width: 14px;
@@ -219,11 +231,6 @@ a.switch-button, a.set-color-button {
     /*position: relative;*/
 }
 
-div.list {
-    /*width: 190px;*/
-    /*width: 100%;*/
-}
-
 div.list a {
     /*width: 100%;*/
     /*margin-right: 130px;*/
@@ -232,9 +239,7 @@ div.list a {
 
 div.list a:after {
 
-
     font-family: 'NotoColorEmoji', 'PT Sans';
-
 
     white-space: nowrap;
     overflow: hidden;
@@ -260,7 +265,6 @@ div.list a.new-note-button:after {
 
 div.notepad {
 
-
     /*font-family: 'NotoColorEmoji';*/
 
     box-sizing: border-box;
@@ -283,20 +287,10 @@ div.notepad {
 
 div.caption {
     position: relative;
-    font-weight: bold;  
+    font-weight: bold;
 
     /*margin-right: 50px;*/
 
-
-
-}
-
-div.caption:before {
-    /*color: #999999;*/
-    /*padding: 5px 5px 5px 5px;*/
-    /*content: '•';*/
-    /*position: relative;*/
-    /*font-weight: bold;*/
 }
 
 a.visibility-button {
@@ -308,19 +302,13 @@ a.visibility-button {
     padding: 5px 5px 5px 5px;
 }
 
-/*a.visibility-button:before {
-    content: '•';
-}
-*/
-
 div.title-wrapper {
     margin-right: 22px;
 }
 
 input.title {
 
-font-family: 'NotoColorEmoji', 'PT Sans';
-    
+    font-family: 'NotoColorEmoji', 'PT Sans';
 
     position: relative;
     z-index: 6001;
@@ -334,8 +322,6 @@ font-family: 'NotoColorEmoji', 'PT Sans';
     box-sizing: border-box;
     padding-left: 20px;
     padding-bottom: 4px;
-
-
 
     /*right: 100px;*/
     /*margin-right: 50px;*/
@@ -353,6 +339,7 @@ textarea.note {
     border-radius: 5px;
     background-color: #dbd7d2;
     resize: none;
+    font-weight: normal;
     /*box-shadow: -25px 0 30px -30px #2b2b2e;*/
     /*position: relative;*/
 }
@@ -378,6 +365,7 @@ div.customize {
     text-align: center;
     z-index: 5000;
 }
+
 div.customize p {
     /*display: inline-block;*/
     text-align: center;
@@ -413,7 +401,7 @@ a.delete-button:after {
     content: '__MSG_remove__';
 }
 
-a.option-button{
+a.option-button {
     box-sizing: border-box;
     display: inline-block;
     text-align: center;
@@ -466,7 +454,8 @@ div.canvas {
     height: 100vh;
 }
 
-div.verify-frame, div.new-note-frame {
+div.verify-frame,
+div.new-note-frame {
     z-index: 8000;
     position: absolute;
     top: 150px;
@@ -504,7 +493,9 @@ div.verify-frame p.caution {
     margin-bottom: 30px;
 }
 
-div.verify-frame a, div.new-note-frame a.create-button, div.new-note-frame a.cancel-button {
+div.verify-frame a,
+div.new-note-frame a.create-button,
+div.new-note-frame a.cancel-button {
     display: inline-block;
     padding: 4px 20px;
     padding-bottom: 6px;
@@ -623,10 +614,6 @@ div.emoji-panel-ground {
     height: 100%;
 }
 
-
-
-
-
 div.emoji-panel {
 
     font-family: 'NotoColorEmoji';
@@ -654,33 +641,25 @@ div.emoji-panel {
 
 a.favourite-emoji {
 
-   /*background-color: #64baff;*/
+    /*background-color: #64baff;*/
 
-   /*background-color: #000;*/
+    /*background-color: #000;*/
 
+    text-shadow:
 
-   text-shadow: 
+        #fcf8db 1px 1px 1px,
+        #fcf8db -1px -1px 1px,
+        #fcf8db 1px -1px 1px,
+        #fcf8db -1px 1px 1px,
 
-                #fcf8db 1px 1px 1px, 
-                #fcf8db -1px -1px 1px, 
-                #fcf8db 1px -1px 1px, 
-                #fcf8db -1px 1px 1px,
-
-
-                #ffa154 3px 3px 6px, 
-                #ffa154 -3px -3px 6px, 
-                #ffa154 3px -3px 6px, 
-                #ffa154 -3px 3px 6px;
-
-
-
-
+        #ffa154 3px 3px 6px,
+        #ffa154 -3px -3px 6px,
+        #ffa154 3px -3px 6px,
+        #ffa154 -3px 3px 6px;
 
 }
 
 a.emoji-button {
-
-
 
     position: relative;
     z-index: 20;
@@ -692,22 +671,15 @@ a.emoji-button {
     /*background-color: red;*/
 }
 
-
 /*outline: 1px dotted #00bfff !important;*/
-
 
 a.emoji-button:focus {
 
-        text-shadow:
+    text-shadow:
 
-                #ffa154 3px 3px 6px, 
-                #ffa154 -3px -3px 6px, 
-                #ffa154 3px -3px 6px, 
-                #ffa154 -3px 3px 6px;
-
-
-
+        #ffa154 3px 3px 6px,
+        #ffa154 -3px -3px 6px,
+        #ffa154 3px -3px 6px,
+        #ffa154 -3px 3px 6px;
 
 }
-
-

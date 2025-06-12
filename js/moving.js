@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // var body = document.querySelector('body');
 
+            /* 
             body.addEventListener('mousemove', function(event) {
 
                 // var newYCoordinates = (event.pageY + '');
@@ -26,8 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // switchButton.style.top = newYCoordinates + 'px';
 
-            });
-
+            }); 
+            */
         });
 
     };
