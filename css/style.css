@@ -143,17 +143,12 @@ a {
 }
 
 a.logo {
-    position: relative;
-    z-index: 6000;
-    display: block;
-    top: 19px;
-    left: 22px;
     /* position: absolute; */
     cursor: pointer;
     width: 24px;
-    height: 22px;
+    height: 24px;
     /*border: 1px dashed #434345;*/
-    overflow: hidden;
+    vertical-align: middle;
 }
 
 a.logo div {
@@ -584,7 +579,7 @@ a.emoji-panel-button {
     font-weight: bold;
 }
 
-div.emoji-panel-buttong-ground {
+div.emoji-panel-button-base {
     z-index: 6500;
     /* position: absolute; */
     background-color: inherit;

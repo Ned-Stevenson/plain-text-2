@@ -1,5 +1,6 @@
 body {
     flex-direction: column;
+    margin: 2%;
 }
 
 div.header {
@@ -7,10 +8,11 @@ div.header {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: #f0f0f0;
+    background-color: inherit;
 }
 
 div.list {
     overflow-x: visible;
     overflow-y: visible;
+    margin-top: 10px;
 }

@@ -23,6 +23,8 @@
     </meta>
 </head>
 
+<!-- TODO - Go through the whole sidebar.html and replace unique classes with ids -->
+
 <body class="">
     <!-- TODO - Rename the header class to be something more clear-->
     <div class="header">
@@ -32,8 +34,14 @@
             </div>
         </a>
 
-        <div class="emoji-panel-buttong-ground"></div>
-
+        <div class="emoji-panel-button-base">
+            <a class="emoji-panel-button" href=""> :-) </a>
+            <!-- TODO - We may need to restructure this a bit to allow the panel to properly expand on reveal-->
+            <div class="emoji-panel hidden">
+                <!-- TODO - Rename emoji-panel-ground to emoji-panel-background -->
+                <div class="emoji-panel-ground"> </div>
+            </div>
+        </div>
     </div>
 
     <div class="list">

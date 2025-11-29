@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // create elements
 
-    // buildDomElement('.notepad', 'div', 'emoji-panel-buttong-ground');
-    buildLinkElement('.emoji-panel-buttong-ground', 'emoji-panel-button', '', ':-)');
-    buildDomElement('.notepad', 'div', 'emoji-panel');
-    buildDomElement('.emoji-panel', 'div', 'emoji-panel-ground');
+    // buildDomElement('.notepad', 'div', 'emoji-panel-button-base');
+    // buildLinkElement('.emoji-panel-button-base', 'emoji-panel-button', '', ':-)');
+    // buildDomElement('.notepad', 'div', 'emoji-panel');
+    // buildDomElement('.emoji-panel', 'div', 'emoji-panel-ground');
 
     for (var i = 0; i < emoji.length; i++) {
         buildLinkElement('.emoji-panel', 'emoji-button-' + i, '', emoji[i]);
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var emojiPanelGround = document.querySelector('.emoji-panel-ground');
 
     emojiPanel.classList.add('hidden');
-    emojiPanelGround.classList.add('hidden');
+    // emojiPanelGround.classList.add('hidden');
 
     // localization
 
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     emojiPanelButton.addEventListener('click', function(event) {
         event.preventDefault();
         emojiPanel.classList.toggle('hidden');
-        emojiPanelGround.classList.toggle('hidden');
+        // emojiPanelGround.classList.toggle('hidden');
     });
 
     // the function removes the frame around the link
@@ -67,8 +67,8 @@ document.addEventListener('DOMContentLoaded', function() {
         focusedElement.blur();
         focusedElement.focus();
     });
-    var emojiPanelButtongGround = document.querySelector('.emoji-panel-buttong-ground');
-    emojiPanelButtongGround.addEventListener('click', function(event) {
+    var emojiPanelButtonBase = document.querySelector('.emoji-panel-button-base');
+    emojiPanelButtonBase.addEventListener('click', function(event) {
         focusedElement.blur();
         focusedElement.focus();
     });
