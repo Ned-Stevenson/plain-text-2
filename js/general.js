@@ -28,14 +28,7 @@ function removeSelectedClass(element) {
 }
 
 function setWindowSize() {
-    var bodyMain = document.querySelector('body');
-    var notePadSizeBody = localStorage.getItem('notepad-size');
-    var activeButtonSetWindowSize = localStorage.getItem('notepad-size-key');
-    if (activeButtonSetWindowSize == null || undefined) {
-        activeButtonSetWindowSize = 'medium';
-        notePadSizeBody = 630;
-    }
-    bodyMain.style.width = notePadSizeBody + 'px';
+    // Body sizing is now handled by CSS; legacy size toggles removed.
 }
 
 function getColors(i) {

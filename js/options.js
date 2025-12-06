@@ -1,48 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-
-    // set winow size
-
-    var bodyMain = document.querySelector('body');
-    var notePadSizeBody = localStorage.getItem('notepad-size');
-    var activeButtonSetWindowSize = localStorage.getItem('notepad-size-key');
-    if (activeButtonSetWindowSize == null || undefined) {
-        activeButtonSetWindowSize = 'medium';
-        notePadSizeBody = 630;
-    }
-    var activeButtonSetWindow = document.querySelector('.' + activeButtonSetWindowSize + '-size');
-    activeButtonSetWindow.classList.add('selected');
-    bodyMain.style.width = notePadSizeBody + 'px';
-
-    // notepad size options
-
-    var setNotepadSize = function(size) {
-        var bodyMain = document.querySelector('body');
-        var smallSizeButton = document.querySelector('.small-size');
-        var mediumSizeButton = document.querySelector('.medium-size');
-        var largeSizeButton = document.querySelector('.large-size');
-        var button = document.querySelector('.' + size + '-size');
-        button.addEventListener('click', function(event) {
-            event.preventDefault();
-            removeSelectedClass('notepad-size-block');
-            button.classList.add('selected');
-            var width;
-            if (size == 'small') {
-                width = 490;
-            } else if (size == 'medium') {
-                width = 630;
-            } else if (size == 'large') {
-                width = 790;
-            }
-            bodyMain.style.width = width + 'px';
-            console.log(width + 'px');
-            localStorage.setItem('notepad-size', width);
-            localStorage.setItem('notepad-size-key', size);
-        });
-    };
-    setNotepadSize('small');
-    setNotepadSize('medium');
-    setNotepadSize('large');
-
     // set default color
 
     var defaultColorButton = localStorage.getItem('defaultColor');

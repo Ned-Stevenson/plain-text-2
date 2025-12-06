@@ -66,42 +66,6 @@ table {
     src: url("../fonts/NotoColorEmoji.ttf") format("ttf");
 }
 
-.small-size {
-    width: 490px;
-}
-
-.medium-size {
-    width: 630px;
-}
-
-.large-size {
-    width: 790px;
-}
-
-@media screen and (max-width: 790px) {
-
-    /*removes the flickering window*/
-    body {
-        width: 790px;
-    }
-}
-
-@media screen and (max-width: 630px) {
-
-    /*removes the flickering window*/
-    body {
-        width: 630px;
-    }
-}
-
-@media screen and (max-width: 490px) {
-
-    /*removes the flickering window*/
-    body {
-        width: 490px;
-    }
-}
-
 body {
     position: relative;
     box-sizing: border-box;

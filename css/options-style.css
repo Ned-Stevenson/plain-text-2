@@ -140,24 +140,6 @@ table {
     src: url("../fonts/pt-mono.woff") format("woff");
 }
 
-@media screen and (max-width: 790px) {
-    body {
-        width: 790px;
-    }
-}
-
-@media screen and (max-width: 630px) {
-    body {
-        width: 630px;
-    }
-}
-
-@media screen and (max-width: 490px) {
-    body {
-        width: 490px;
-    }
-}
-
 body {
     box-sizing: border-box;
     position: relative;

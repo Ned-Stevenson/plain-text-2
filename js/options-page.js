@@ -30,21 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
     localizeElement('.font-size-example', 'pangram');
     // todo: add random pangram!
 
-    // notepad size
-
-    buildDomElement('.main-area', 'p', 'notepad-size-block');
-    addClassName('.notepad-size-block', 'pref');
-    localizeElement('.notepad-size-block', 'notepad');
-    buildLinkElement('.notepad-size-block', 'large-size', '', '');
-    addClassName('.large-size', 'button');
-    localizeElement('.large-size', 'large');
-    buildLinkElement('.notepad-size-block', 'medium-size', '', '');
-    addClassName('.medium-size', 'button');
-    localizeElement('.medium-size', 'medium');
-    buildLinkElement('.notepad-size-block', 'small-size', '', '');
-    addClassName('.small-size', 'button');
-    localizeElement('.small-size', 'small');
-
     // set color
 
     buildDomElement('.main-area', 'p', 'set-color-block');
