@@ -7,8 +7,8 @@
     </title>
     <meta charset="utf-8">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link href="css/colors.css" rel="stylesheet" type="text/css">
     <link href="css/sidebar.css" rel="stylesheet" type="text/css">
+    <link href="css/colors.css" rel="stylesheet" type="text/css">
 
     <script src="js/general.js" type="text/javascript"></script>
     <script src="js/page.js" type="text/javascript"></script>
@@ -26,32 +26,33 @@
 <!-- TODO - Go through the whole sidebar.html and replace unique classes with ids -->
 
 <body class="">
-    <!-- TODO - Rename the header class to be something more clear-->
-    <div class="header">
-        <a class="logo" href="">
-            <div>
-                *
-            </div>
-        </a>
+    <div class="controller-panel">
+        <!-- TODO - Rename the header class to be something more clear-->
+        <div class="header">
+            <a class="logo" href="">
+                <div>
+                    *
+                </div>
+            </a>
 
-        <div class="emoji-panel-button-base">
-            <a class="emoji-panel-button" href=""> :-) </a>
-            <!-- TODO - We may need to restructure this a bit to allow the panel to properly expand on reveal-->
-            <div class="emoji-panel hidden">
-                <!-- TODO - Rename emoji-panel-ground to emoji-panel-background -->
-                <div class="emoji-panel-ground"> </div>
+            <div class="emoji-panel-button-base">
+                <a class="emoji-panel-button" href=""> :-) </a>
+                <!-- TODO - We may need to restructure this a bit to allow the panel to properly expand on reveal-->
+                <div class="emoji-panel hidden">
+                    <!-- TODO - Rename emoji-panel-ground to emoji-panel-background -->
+                    <div class="emoji-panel-ground"> </div>
+                </div>
             </div>
+        </div>
+
+        <div class="list">
+            <a class="new-note-button" href="">
+                <div class="horizont-plus"> </div>
+                <div class="vertical-plus"> </div>
+            </a>
         </div>
     </div>
 
-    <div class="list">
-        <a class="new-note-button" href="">
-            <div class="horizont-plus"> </div>
-            <div class="vertical-plus"> </div>
-        </a>
-    </div>
-
-    <div class="resize-plank"> </div>
     <div class="canvas hidden"> </div>
 
     <div class="new-note-frame hidden">

@@ -1,6 +1,12 @@
+:root {
+    height: 95%;
+    margin: 5% 1% 5% 1%;
+}
+
 body {
     flex-direction: column;
     margin: 2%;
+    height: 80%;
 }
 
 div.header {
@@ -15,4 +21,8 @@ div.list {
     overflow-x: visible;
     overflow-y: visible;
     margin-top: 10px;
+}
+
+textarea.note {
+    height: 100%;
 }

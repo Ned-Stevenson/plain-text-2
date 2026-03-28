@@ -1,0 +1,29 @@
+body {
+    flex-direction: row;
+    margin: 2%;
+    min-height: 400px;
+}
+
+div.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: inherit;
+    flex-direction: row;
+}
+
+textarea.note {
+    width: 300px;
+    height: 100%;
+}
+
+div.list {
+    width: 100px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+div.list a {
+    max-width: 100%;
+}
