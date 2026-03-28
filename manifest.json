@@ -1,10 +1,10 @@
 {
-    "manifest_version": 2,
-    "name": "Plain Text",
+    "manifest_version": 3,
+    "name": "Plain Text 2",
     "description": "__MSG_extensionDescription__",
-    "version": "2.7.7",
+    "version": "1.0.0",
     "default_locale": "en", 
-    "browser_action":
+    "action":
     {
         "default_icon":
         {
@@ -14,13 +14,23 @@
         "default_title": "Plain text"
     },
 
+    "sidebar_action":
+    {
+        "default_icon":
+        {
+            "48": "img/icon-48-blue.png"
+        },
+        "default_panel": "sidebar.html",
+        "default_title": "Plain text"
+    },
+
     "options_ui": {
           "page": "pages/options.html",
           "open_in_tab": true
         },
 
     "background": {
-        "scripts": ["background.js"]
+        "service_worker": "background.js"
       },
 
     "commands": {
